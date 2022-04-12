@@ -64,3 +64,5 @@ module.exports = {
   splitSentence,
   techList,
 };
+
+começando
