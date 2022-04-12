@@ -15,21 +15,34 @@ function splitSentence(string) {
   return string.split(' ');
 }
 
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayDeStrings) {
+  let stringName = arrayDeStrings[arrayDeStrings.length-1] + ', ' + arrayDeStrings[0];
+  return stringName;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  const pointsWin = 3;
+  const pointsTies = 1;
+  let totalPoints = pointsWin * wins + pointsTies * ties;
+  return totalPoints;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+function highestCount(numbers) {
+  let count = 0;
+  let numbersOrdenados = numbers.sort(function(a, b){return a -b});
+  for (let index in numbers) {
+    if (numbersOrdenados[numbersOrdenados.length - 1] === numbers[index]) {
+      count += 1;
+    }
+  }
+  return count;
 }
+
+console.log(highestCount([-2, -2, -1]));
 
 // Desafio 7
 function catAndMouse() {
