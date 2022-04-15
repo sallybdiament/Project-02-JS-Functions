@@ -17,7 +17,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayDeStrings) {
-  let stringName = arrayDeStrings[arrayDeStrings.length-1] + ', ' + arrayDeStrings[0];
+  let stringName = arrayDeStrings[arrayDeStrings.length - 1 ] + ', ' + arrayDeStrings[0];
   return stringName;
 }
 
@@ -33,7 +33,7 @@ function footballPoints(wins, ties) {
 
 function highestCount(numbers) {
   let count = 0;
-  let numbersOrdenados = numbers.sort(function(a, b){return a -b});
+  let numbersOrdenados = numbers.sort(function (a, b) { return a - b; });
   for (let index in numbers) {
     if (numbersOrdenados[numbersOrdenados.length - 1] === numbers[index]) {
       count += 1;
@@ -51,18 +51,37 @@ function catAndMouse(mouse, cat1, cat2) {
   distCat2 = Math.abs(distCat2);
   if (distCat1 < distCat2) {
     mensagem = 'cat1';
-  }
-  else if (distCat1 === distCat2) {
+  } else if (distCat1 === distCat2) {
     mensagem = 'os gatos trombam e o rato foge';
-  } else { mensagem = 'cat2';}
+  } else { mensagem = 'cat2'; }
   return mensagem;
 }
 
 // Desafio 8
-function fizzBuzz (numeros) {
+// function ajudaFizz(numeros2) {
+//  if (numeros[indice] % 3 === 0 && numeros[indice] % 5 === 0) {
+//    newArray.push('fizzBuzz');
+//  }
+//  else if (numeros[indice] % 3 === 0) {
+//    newArray.push('fizz');
+//  }
+//  else if (numeros[indice] % 5 === 0) {
+//    newArray.push('buzz');
+//  }
+//  else {newArray.push('bug!');}
+// }
+
+// function fizzBuzz(numeros) {
+//  let newArray = [];
+//  for (let indice in numeros) {
+//   }
+// return newArray;
+// }
+
+function fizzBuzz(numeros) {
   let newArray = [];
   for (let indice in numeros) {
-    if (numeros[indice] % 3 === 0 && numeros[indice] % 5 === 0){
+    if (numeros[indice] % 3 === 0 && numeros[indice] % 5 === 0) {
       newArray.push('fizzBuzz');
     }
     else if (numeros[indice] % 3 === 0) {
@@ -75,16 +94,47 @@ function fizzBuzz (numeros) {
   }
   return newArray;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+
+function encode(frase) {
+  let vogaisCode = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let encodeFrase = '';
+  for (let i = 0; i < frase.length; i += 1) {
+    let temVogal = vogaisCode[frase[i]];
+    if (typeof (temVogal) === 'number') {
+      encodeFrase += temVogal;
+    } else { encodeFrase += frase[i]; }
+  }
+  return encodeFrase;
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode("hi there!"));
+
+function decode(fraseComNumeros) {
+  let vogaisUncode = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let decodeFraseComNumeros = '';
+  for (let i = 0; i < fraseComNumeros.length; i += 1) {
+    if (fraseComNumeros[i] <= 5 && fraseComNumeros[i] >= 1) {
+      decodeFraseComNumeros += vogaisUncode[fraseComNumeros[i]];
+    } else { decodeFraseComNumeros += fraseComNumeros[i]; }
+  }
+  return decodeFraseComNumeros;
 }
+
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
