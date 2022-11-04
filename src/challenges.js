@@ -137,9 +137,31 @@ function decode(fraseComNumeros) {
 console.log(decode('h3 th2r2!'));
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+let objeto = {
+  tech: ['React', 'Jest', 'HTML', 'CSS', 'JS'],
+  name: 'Lucas',
+};
+
+let newObjeto = [];
+let objetoOrdenado = [];
+
+function ordenarObjeto (objeto) {
+  objeto[tech].sort;
+  
 }
+
+function techList(objeto) {
+  for (let key in objeto.tech) {
+    newObjeto.push({
+      tech: objeto.tech[key],
+      name: 'Lucas',
+      });
+    }
+      return newObjeto;
+}
+
+techList(objeto);
+console.log(newObjeto);
 
 module.exports = {
   calcArea,
