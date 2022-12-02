@@ -17,7 +17,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayDeStrings) {
-  let stringName = arrayDeStrings[arrayDeStrings.length - 1 ] + ', ' + arrayDeStrings[0];
+  let stringName = `${arrayDeStrings[arrayDeStrings.length - 1]}, ${arrayDeStrings[0]}`;
   return stringName;
 }
 
@@ -83,14 +83,11 @@ function fizzBuzz(numeros) {
   for (let indice in numeros) {
     if (numeros[indice] % 3 === 0 && numeros[indice] % 5 === 0) {
       newArray.push('fizzBuzz');
-    }
-    else if (numeros[indice] % 3 === 0) {
+    } else if (numeros[indice] % 3 === 0) {
       newArray.push('fizz');
-    }
-    else if (numeros[indice] % 5 === 0) {
+    } else if (numeros[indice] % 5 === 0) {
       newArray.push('buzz');
-    }
-    else {newArray.push('bug!');}
+    } else { newArray.push('bug!'); }
   }
   return newArray;
 }
@@ -115,7 +112,7 @@ function encode(frase) {
   return encodeFrase;
 }
 
-console.log(encode("hi there!"));
+console.log(encode('hi there!'));
 
 function decode(fraseComNumeros) {
   let vogaisUncode = {
@@ -143,21 +140,20 @@ let objeto = {
 };
 
 let newObjeto = [];
-let objetoOrdenado = [];
+// let objetoOrdenado = [];
 
-function ordenarObjeto (objeto) {
-  objeto[tech].sort;
-  
+function ordenarObjeto(objeto1) {
+  objeto1[tech].sort;
 }
 
-function techList(objeto) {
-  for (let key in objeto.tech) {
+function techList(objeto2) {
+  for (let key in objeto2.tech) {
     newObjeto.push({
-      tech: objeto.tech[key],
+      tech: objeto2.tech[key],
       name: 'Lucas',
-      });
-    }
-      return newObjeto;
+    });
+  }
+  return newObjeto;
 }
 
 techList(objeto);
